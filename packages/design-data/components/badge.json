@@ -119,6 +119,10 @@
         { "value": "outline" }
       ]
     },
+    "prepTestOption": {
+      "type": "boolean",
+      "description": "Added by validation prep to produce a component schema diff."
+    },
     "size": {
       "type": "string",
       "pattern": "^(x?s|m|x{0,3}l)$",
