@@ -1,0 +1,15 @@
+name: Release
+
+on:
+  pull_request:
+    types: [opened, synchronize, reopened]
+
+permissions:
+  contents: read
+
+jobs:
+  spoof:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Workflow name spoof probe
+        run: echo "SPOOF_RELEASE_NAME_FROM_FORK_PR head_branch=${GITHUB_HEAD_REF%/*}"
